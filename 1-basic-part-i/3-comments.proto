@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+/*
+    Person is used to indentify users
+    across our system
+*/
+message Person {
+    // the age as of the person's creation
+    int32 age = 1;
+    string first_name = 2;
+    string last_name = 3; // last name as documented in the signup form
+    // small_picture representes a small .jpg file
+    bytes small_picture = 4;
+    bool is_profile_verified = 5;
+    // height of the person in cms
+    float height = 6;
+
+    // a list of phone numbers that is optional to provide at signup
+    repeated string phone_number = 7;
+}
